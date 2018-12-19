@@ -13,7 +13,6 @@ class PersonalTableViewCell: UITableViewCell {
     @IBOutlet weak var mainContrainView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var rightChildView: UIView!
-    
     var indexPath: String?
     
     lazy var valueLabel: UILabel = {
@@ -83,5 +82,6 @@ class PersonalTableViewCell: UITableViewCell {
         markColorButton.rightAnchor.constraint(equalTo: rightChildView.rightAnchor).isActive = true
         markColorButton.centerYAnchor.constraint(equalTo: rightChildView.centerYAnchor).isActive = true
         markColorButton.layer.cornerRadius = 15
+        markColorButton.backgroundColor = UIColor.tableView.titleLabel
     }
 }

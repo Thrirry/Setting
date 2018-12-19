@@ -65,6 +65,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1B15B0521CA562C002F3916 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1E302B621C91453008E00FE /* AppDelegate.swift */,
+				F1E302C221C91455008E00FE /* Info.plist */,
+				F1E302BD21C91455008E00FE /* Assets.xcassets */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		F1B15B0621CA5648002F3916 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F1E302B821C91453008E00FE /* ViewController.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		F1B15B0721CA5661002F3916 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F1E302C821C914E4008E00FE /* Structure.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F1B15B0821CA56A6002F3916 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1B15B0A21CA575F002F3916 /* Xib */,
+				F1B15B0921CA56AC002F3916 /* Storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1B15B0921CA56AC002F3916 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F1E302BA21C91453008E00FE /* Main.storyboard */,
+				F1E302BF21C91455008E00FE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F1B15B0A21CA575F002F3916 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				F1E302D421C923E5008E00FE /* AccountTableViewCell.xib */,
+				F1E302DE21C958CC008E00FE /* SubscriptionTableViewCell.xib */,
+				F1B15AFE21CA0DAA002F3916 /* PersonalTableViewCell.xib */,
+				F1B15B0221CA1735002F3916 /* OtherTableViewCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
 		F1E302AA21C91453008E00FE = {
 			isa = PBXGroup;
 			children = (
@@ -84,18 +139,15 @@
 		F1E302B521C91453008E00FE /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				F1B15B0821CA56A6002F3916 /* View */,
+				F1B15B0721CA5661002F3916 /* Utilities */,
+				F1B15B0621CA5648002F3916 /* Scene */,
+				F1B15B0521CA562C002F3916 /* Support Files */,
 				F1E302DA21C93222008E00FE /* Exts */,
 				F1E302D721C92C08008E00FE /* Common */,
 				F1E302D221C923CE008E00FE /* Cell */,
 				F1E302CF21C9227A008E00FE /* Data */,
 				F1E302CA21C92242008E00FE /* Model */,
-				F1E302B621C91453008E00FE /* AppDelegate.swift */,
-				F1E302B821C91453008E00FE /* ViewController.swift */,
-				F1E302BA21C91453008E00FE /* Main.storyboard */,
-				F1E302BD21C91455008E00FE /* Assets.xcassets */,
-				F1E302BF21C91455008E00FE /* LaunchScreen.storyboard */,
-				F1E302C221C91455008E00FE /* Info.plist */,
-				F1E302C821C914E4008E00FE /* Structure.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -121,13 +173,9 @@
 			isa = PBXGroup;
 			children = (
 				F1E302D321C923E5008E00FE /* AccountTableViewCell.swift */,
-				F1E302D421C923E5008E00FE /* AccountTableViewCell.xib */,
 				F1E302DD21C958CC008E00FE /* SubscriptionTableViewCell.swift */,
-				F1E302DE21C958CC008E00FE /* SubscriptionTableViewCell.xib */,
 				F1B15AFD21CA0DAA002F3916 /* PersonalTableViewCell.swift */,
-				F1B15AFE21CA0DAA002F3916 /* PersonalTableViewCell.xib */,
 				F1B15B0121CA1735002F3916 /* OtherTableViewCell.swift */,
-				F1B15B0221CA1735002F3916 /* OtherTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -383,7 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Setting/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Setting/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -400,7 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Setting/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Setting/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
