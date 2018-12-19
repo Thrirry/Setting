@@ -1,0 +1,68 @@
+{
+    "setting": {
+        "id": 1,
+        "account": [
+            {
+                "row": "0",
+                "key": "Signed In",
+                "value": "dubydu97@gmail.com"
+            },
+            {
+                "row": "1",
+                "key": "Drive Detection",
+                "value": ""
+            }
+        ],
+        "subscription": [
+            {
+                "row": "0",
+                "key": "Free",
+                "value": "14 Drivers remaining"
+            },
+            {
+                "row": "1",
+                "key": "Get Unlimited Drivers",
+                "value": ""
+            },
+            {
+                "row": "2",
+                "key": "Support Simple",
+                "value": ""
+            }
+        ],
+        "personalization": [
+            {
+                "row": "0",
+                "key": "Vehicles",
+                "value": "3"
+            },
+            {
+                "row": "1",
+                "key": "Custom Purposes",
+                "value": ""
+            },
+            {
+                "row": "2",
+                "key": "Mileage Rates",
+                "value": "US"
+            },
+            {
+                "row": "3",
+                "key": "Theme",
+                "value": "#FBFBFB"
+            },
+            {
+                "row": "4",
+                "key": "Languge",
+                "value": "English"
+            },
+            {
+                "row": "5",
+                "key": "Use Imperial Units (Miles)",
+                "value": ""
+            }
+        ]
+    },
+    "error": 0,
+    "message": "Success"
+}
