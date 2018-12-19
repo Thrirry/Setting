@@ -13,6 +13,7 @@ class SubscriptionTableViewCell: UITableViewCell {
     @IBOutlet weak var mainContrainView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var rightChildView: UIView!
+    var indexPath: String?
     
     lazy var valueLabel: UILabel = {
         let lb = UILabel()
@@ -27,24 +28,25 @@ class SubscriptionTableViewCell: UITableViewCell {
     var item: Subs?  {
         didSet {
             titleLabel?.text = item?.key
+            indexPath = item?.row
             
-            if titleLabel.text == "Free" {
+            if indexPath == "0" {
                 uiWithoutIcon()
                 iconImgView.isHidden = true
                 valueLabel.text = item?.value
             }
             
-            if titleLabel.text == "Get Unlimited Drivers" || titleLabel.text == "Support Simple" {
+            if indexPath == "1" || indexPath == "2" {
                 uiWithinIcon()
                 valueLabel.isHidden = true
                 self.accessoryType = .disclosureIndicator
             }
             
-            if titleLabel.text == "Get Unlimited Drivers" {
+            if indexPath == "1" {
                 iconImgView.image = UIImage(named: "iconLock")
             }
             
-            if titleLabel.text == "Support Simple" {
+            if indexPath == "2" {
                 iconImgView.image = UIImage(named: "iconDollar")
             }
         }
@@ -73,6 +75,7 @@ class SubscriptionTableViewCell: UITableViewCell {
     }
     
     func uiWithinIcon() {
+        titleLabel.textColor = UIColor.tableView.titleLabel
         iconImgView.leftAnchor.constraint(equalTo: mainContrainView.leftAnchor, constant: 16).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: iconImgView.rightAnchor, constant: 16).isActive = true
     }

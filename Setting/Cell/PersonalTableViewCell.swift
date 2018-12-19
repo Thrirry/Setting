@@ -13,11 +13,18 @@ class PersonalTableViewCell: UITableViewCell {
     @IBOutlet weak var mainContrainView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var rightChildView: UIView!
+    
     var indexPath: String?
     
     lazy var valueLabel: UILabel = {
         let lb = UILabel()
         return lb
+    }()
+    
+    lazy var markColorButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     var item: Account?  {
@@ -37,6 +44,12 @@ class PersonalTableViewCell: UITableViewCell {
                 valueLabel.isHidden = true
                 rightChildView.addSubview(switchView)
                 accessoryView = switchView
+            }
+            
+            if indexPath == "3" {
+                valueLabel.isHidden = true
+                setupmarkColorButton()
+//                markColorButton.backgroundColor = UIColor(rgb: colors)
             }
         }
     }
@@ -61,5 +74,14 @@ class PersonalTableViewCell: UITableViewCell {
     
     func setupUI() {
         setupFirstOptionView(mainContrainView: mainContrainView, titleLabel: titleLabel, rightChildView: rightChildView, valueLabel: valueLabel)
+    }
+    
+    func setupmarkColorButton() {
+        rightChildView.addSubview(markColorButton)
+        markColorButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        markColorButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        markColorButton.rightAnchor.constraint(equalTo: rightChildView.rightAnchor).isActive = true
+        markColorButton.centerYAnchor.constraint(equalTo: rightChildView.centerYAnchor).isActive = true
+        markColorButton.layer.cornerRadius = 15
     }
 }

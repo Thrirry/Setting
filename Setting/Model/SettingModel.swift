@@ -24,6 +24,7 @@ class Setting {
     var account = [Account]()
     var sub = [Subs]()
     var personalization = [Personalization]()
+    var othersetting = [OtherSetting]()
     
     init?(data: Data) {
         do {
@@ -41,6 +42,9 @@ class Setting {
                     self.personalization = personal.map { Personalization(json: $0) }
                 }
                 
+                if let otherSetting = body["otherSetting"] as? [[String: Any]] {
+                    self.othersetting = otherSetting.map { OtherSetting(json: $0) }
+                }
             }
         } catch {
             print("Error deserializing JSON: \(error)")
@@ -64,3 +68,5 @@ class Account {
 class Subs: Account {}
 
 class Personalization: Account {}
+
+class OtherSetting: Account {}

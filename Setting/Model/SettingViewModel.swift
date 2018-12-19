@@ -13,6 +13,7 @@ enum SettingViewModelItemType {
     case account
     case subscription
     case personalization
+    case othersetting
 }
 
 protocol SettingViewModelItem {
@@ -46,6 +47,12 @@ class SettingViewModel: NSObject {
         if !personal.isEmpty {
             let persItem = PersonalViewModeItem(pers: personal)
             items.append(persItem)
+        }
+        
+        let otherSetting = setting.othersetting
+        if !otherSetting.isEmpty {
+            let othersItem = OtherSettingViewModeItem(others: otherSetting)
+            items.append(othersItem)
         }
 
     }
@@ -84,6 +91,14 @@ extension SettingViewModel: UITableViewDataSource {
             if let item = item as? PersonalViewModeItem, let cell = tableView.dequeueReusableCell(withIdentifier: PersonalTableViewCell.identifier, for: indexPath) as? PersonalTableViewCell {
                 
                 cell.item = item.per[indexPath.row]
+                
+                return cell
+            }
+            
+        case .othersetting:
+            if let item = item as? OtherSettingViewModeItem, let cell = tableView.dequeueReusableCell(withIdentifier: OtherTableViewCell.identifier, for: indexPath) as? OtherTableViewCell {
+                
+                cell.item = item.other[indexPath.row]
                 
                 return cell
             }
@@ -153,6 +168,26 @@ class PersonalViewModeItem: SettingViewModelItem {
     
     init(pers: [Personalization]) {
         self.per = pers
+    }
+}
+
+class OtherSettingViewModeItem: SettingViewModelItem {
+    var type: SettingViewModelItemType {
+        return .othersetting
+    }
+    
+    var sectionTitle: String {
+        return "Other Setting"
+    }
+    
+    var other: [OtherSetting]
+    
+    var rowCount: Int {
+        return other.count
+    }
+    
+    init(others: [OtherSetting]) {
+        self.other = others
     }
 }
 

@@ -29,6 +29,8 @@ class ViewController: BaseViewController {
         tableView.register(SubscriptionTableViewCell.nib, forCellReuseIdentifier: SubscriptionTableViewCell.identifier)
         
         tableView.register(PersonalTableViewCell.nib, forCellReuseIdentifier: PersonalTableViewCell.identifier)
+        
+        tableView.register(OtherTableViewCell.nib, forCellReuseIdentifier: OtherTableViewCell.identifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +70,5 @@ extension ViewController: UITableViewDelegate {
         
         guard let header = view as? UITableViewHeaderFooterView else { fatalError() }
         header.textLabel?.textColor = UIColor.tableView.sectionTitle
-//        header.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        
     }
 }

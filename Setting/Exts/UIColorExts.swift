@@ -21,6 +21,8 @@ extension UIColor {
     
     struct tableView {
         static let mainBackgroundColor = UIColor(rgb: 0xF7F7F7)
+        static let titleLabel = UIColor(rgb: 0x03546C)
+        
         static let backgroundSection = UIColor(rgb: 0xFAF5DF)
         static let sectionTitle = UIColor(rgb: 0xC9C9C9)
         static let backgroundContent = UIColor(rgb: 0xFAF6DF)
@@ -30,7 +32,7 @@ extension UIColor {
     }
     
     struct navigatorItem {
-        static let buttonColor = UIColor(rgb: 0x02A9BF)
+        static let buttonColor = UIColor(rgb: 0x03546C)
     }
 
 }

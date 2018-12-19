@@ -49,7 +49,7 @@
             {
                 "row": "3",
                 "key": "Theme",
-                "value": "#FBFBFB"
+                "value": "0x0D59FF"
             },
             {
                 "row": "4",
@@ -61,6 +61,18 @@
                 "key": "Use Imperial Units (Miles)",
                 "value": ""
             }
+        ],
+        "otherSetting": [
+            {
+                "row": "0",
+                "key": "Rate Made Simple",
+                "value": ""
+            },
+            {
+                "row": "1",
+                "key": "Version",
+                "value": "1.0"
+            },
         ]
     },
     "error": 0,
